@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB4E1531251B237400534C3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E1530251B237400534C3F /* Message.swift */; };
+		BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */; };
+		BB94BD02251B259500605A1C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD01251B259500605A1C /* MessageView.swift */; };
+		BB94BD05251B2F1700605A1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD04251B2F1700605A1C /* Extensions.swift */; };
+		BBA81F3D251B178D0073C606 /* InstantMagicChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */; };
+		BBA81F3F251B178D0073C606 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA81F3E251B178D0073C606 /* ChatView.swift */; };
+		BBA81F41251B178E0073C606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA81F40251B178E0073C606 /* Assets.xcassets */; };
+		BBA81F44251B178E0073C606 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA81F43251B178E0073C606 /* Preview Assets.xcassets */; };
+		BBA81F50251B187A0073C606 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA81F4F251B187A0073C606 /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB4E1530251B237400534C3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BB94BD01251B259500605A1C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		BB94BD04251B2F1700605A1C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BBA81F39251B178D0073C606 /* InstantMagicChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstantMagicChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantMagicChatApp.swift; sourceTree = "<group>"; };
+		BBA81F3E251B178D0073C606 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		BBA81F40251B178E0073C606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBA81F43251B178E0073C606 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBA81F45251B178E0073C606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA81F4C251B186E0073C606 /* InstantMagicChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstantMagicChat.entitlements; sourceTree = "<group>"; };
+		BBA81F4F251B187A0073C606 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBA81F36251B178D0073C606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA81F50251B187A0073C606 /* CloudKit.framework in Frameworks */,
+				BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB51352F251B22B800D099A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB4E1530251B237400534C3F /* Message.swift */,
+				BB94BD04251B2F1700605A1C /* Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB513530251B22C100D099A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
+				BBA81F3E251B178D0073C606 /* ChatView.swift */,
+				BB94BD01251B259500605A1C /* MessageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBA81F30251B178D0073C606 = {
+			isa = PBXGroup;
+			children = (
+				BBA81F3B251B178D0073C606 /* InstantMagicChat */,
+				BBA81F3A251B178D0073C606 /* Products */,
+				BBA81F4E251B187A0073C606 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BBA81F3A251B178D0073C606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBA81F39251B178D0073C606 /* InstantMagicChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBA81F3B251B178D0073C606 /* InstantMagicChat */ = {
+			isa = PBXGroup;
+			children = (
+				BB51352F251B22B800D099A2 /* Model */,
+				BB513530251B22C100D099A2 /* View */,
+				BBA81F4C251B186E0073C606 /* InstantMagicChat.entitlements */,
+				BBA81F40251B178E0073C606 /* Assets.xcassets */,
+				BBA81F45251B178E0073C606 /* Info.plist */,
+				BBA81F42251B178E0073C606 /* Preview Content */,
+			);
+			path = InstantMagicChat;
+			sourceTree = "<group>";
+		};
+		BBA81F42251B178E0073C606 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BBA81F43251B178E0073C606 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BBA81F4E251B187A0073C606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBA81F4F251B187A0073C606 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBA81F38251B178D0073C606 /* InstantMagicChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBA81F48251B178E0073C606 /* Build configuration list for PBXNativeTarget "InstantMagicChat" */;
+			buildPhases = (
+				BBA81F35251B178D0073C606 /* Sources */,
+				BBA81F36251B178D0073C606 /* Frameworks */,
+				BBA81F37251B178D0073C606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstantMagicChat;
+			packageProductDependencies = (
+				BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */,
+			);
+			productName = InstantMagicChat;
+			productReference = BBA81F39251B178D0073C606 /* InstantMagicChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBA81F31251B178D0073C606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					BBA81F38251B178D0073C606 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = BBA81F34251B178D0073C606 /* Build configuration list for PBXProject "InstantMagicChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBA81F30251B178D0073C606;
+			packageReferences = (
+				BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */,
+			);
+			productRefGroup = BBA81F3A251B178D0073C606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBA81F38251B178D0073C606 /* InstantMagicChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBA81F37251B178D0073C606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA81F44251B178E0073C606 /* Preview Assets.xcassets in Resources */,
+				BBA81F41251B178E0073C606 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBA81F35251B178D0073C606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB94BD05251B2F1700605A1C /* Extensions.swift in Sources */,
+				BB94BD02251B259500605A1C /* MessageView.swift in Sources */,
+				BB4E1531251B237400534C3F /* Message.swift in Sources */,
+				BBA81F3F251B178D0073C606 /* ChatView.swift in Sources */,
+				BBA81F3D251B178D0073C606 /* InstantMagicChatApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BBA81F46251B178E0073C606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBA81F47251B178E0073C606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBA81F49251B178E0073C606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChat.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"InstantMagicChat/Preview Content\"";
+				DEVELOPMENT_TEAM = JT55BTWL93;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = InstantMagicChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "les.inf.puc-rio.br.InstantMagicChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBA81F4A251B178E0073C606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChat.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"InstantMagicChat/Preview Content\"";
+				DEVELOPMENT_TEAM = JT55BTWL93;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = InstantMagicChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "les.inf.puc-rio.br.InstantMagicChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBA81F34251B178D0073C606 /* Build configuration list for PBXProject "InstantMagicChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA81F46251B178E0073C606 /* Debug */,
+				BBA81F47251B178E0073C606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBA81F48251B178E0073C606 /* Build configuration list for PBXNativeTarget "InstantMagicChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA81F49251B178E0073C606 /* Debug */,
+				BBA81F4A251B178E0073C606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rvenieris/CloudKitMagicCRUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */;
+			productName = CloudKitMagicCRUD;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BBA81F31251B178D0073C606 /* Project object */;
+}
