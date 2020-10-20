@@ -12,40 +12,35 @@ struct MessageView: View {
 	@Binding var myName:String
 	var message:Message
 	
-	var itsMe:Bool {
-		return message.sender == myName
-	}
+	var itsMe:Bool { return message.sender == myName }
 	
-    var body: some View {
+	var body: some View {
+		
 		ZStack {
+			
 			RoundedRectangle(cornerRadius: 20)
 				.foregroundColor(self.itsMe ? .green : .gray)
 			VStack {
 				Text(message.sender)
-					Text(message.content)
-						.font(.system(size: 20))
-						.padding(.horizontal)
-						.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-						.multilineTextAlignment(.leading)
-						.lineLimit(.max)
-//						.minimumScaleFactor(1)
-				
-				
+					.lineLimit(1)
+				Text(message.content)
+					.font(.system(size: 20))
+					.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+					.fixedSize(horizontal: false, vertical: true)
 				HStack {
-					Text(message.timestamp.day).font(.system(size: 12))
+					Text(message.timestamp.day)
+						.font(.system(size: 12))
 					Spacer()
-					Text(message.timestamp.time).font(.system(size: 12))
-				}.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
-				.padding(.horizontal, 10.0)
-			}.minimumScaleFactor(0.1)
+					Text(message.timestamp.time)
+						.font(.system(size: 12))
+				}
+				.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
+				.padding(.bottom, 10)
+			}.minimumScaleFactor(1)
+			.padding(.horizontal)
 		}.padding(itsMe ? .leading :.trailing, 20.0)
-		//		.onTapGesture {
-		//			self.isExpanded.toggle()
-		//		}
-		
-		
 		.minimumScaleFactor(0.1)
-		.aspectRatio(contentMode: .fit)
+		.animation(.default)
 	}
 }
 

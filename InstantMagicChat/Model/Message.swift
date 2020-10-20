@@ -13,4 +13,6 @@ struct Message:CKMRecord {
 	var sender:String
 	var content:String
 	var timestamp:Date = Date()
+	var id:String {self.recordName ?? String(self.hashValue)}
+	var minhamusiquinha:[Data]
 }

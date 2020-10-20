@@ -57,7 +57,6 @@
 		BB513530251B22C100D099A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
 				BBA81F3E251B178D0073C606 /* ChatView.swift */,
 				BB94BD01251B259500605A1C /* MessageView.swift */,
 			);
@@ -84,6 +83,7 @@
 		BBA81F3B251B178D0073C606 /* InstantMagicChat */ = {
 			isa = PBXGroup;
 			children = (
+				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
 				BB51352F251B22B800D099A2 /* Model */,
 				BB513530251B22C100D099A2 /* View */,
 				BBA81F4C251B186E0073C606 /* InstantMagicChat.entitlements */,
