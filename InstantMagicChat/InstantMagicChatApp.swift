@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import CloudKitMagicCRUD
 
 @main
 struct InstantMagicChatApp: App {
 	@Environment(\.scenePhase) private var scenePhase
+	
+	init() {
+		CKMDefault.containerIdentifyer = "iCloud.BEPiD.BTC"
+	}
+	
     var body: some Scene {
         WindowGroup {
 			ChatView(messages: [])
