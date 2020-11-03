@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BB1F8D95254B841600FCD8D8 /* mockMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F8D94254B841600FCD8D8 /* mockMessages.swift */; };
 		BB4E1531251B237400534C3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E1530251B237400534C3F /* Message.swift */; };
-		BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */; };
 		BB94BD02251B259500605A1C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD01251B259500605A1C /* MessageView.swift */; };
 		BB94BD05251B2F1700605A1C /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD04251B2F1700605A1C /* ModelExtensions.swift */; };
 		BBA81F3D251B178D0073C606 /* InstantMagicChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */; };
@@ -40,7 +39,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA81F50251B187A0073C606 /* CloudKit.framework in Frameworks */,
-				BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +128,6 @@
 			);
 			name = InstantMagicChat;
 			packageProductDependencies = (
-				BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */,
 			);
 			productName = InstantMagicChat;
 			productReference = BBA81F39251B178D0073C606 /* InstantMagicChat.app */;
@@ -160,7 +157,6 @@
 			);
 			mainGroup = BBA81F30251B178D0073C606;
 			packageReferences = (
-				BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */,
 			);
 			productRefGroup = BBA81F3A251B178D0073C606 /* Products */;
 			projectDirPath = "";
@@ -388,25 +384,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rvenieris/CloudKitMagicCRUD.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB51352B251B227F00D099A2 /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */;
-			productName = CloudKitMagicCRUD;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBA81F31251B178D0073C606 /* Project object */;
 }
