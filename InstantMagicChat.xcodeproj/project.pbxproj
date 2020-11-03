@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1F8D95254B841600FCD8D8 /* mockMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F8D94254B841600FCD8D8 /* mockMessages.swift */; };
 		BB4E1531251B237400534C3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E1530251B237400534C3F /* Message.swift */; };
 		BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */; };
 		BB94BD02251B259500605A1C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD01251B259500605A1C /* MessageView.swift */; };
-		BB94BD05251B2F1700605A1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD04251B2F1700605A1C /* Extensions.swift */; };
+		BB94BD05251B2F1700605A1C /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD04251B2F1700605A1C /* ModelExtensions.swift */; };
 		BBA81F3D251B178D0073C606 /* InstantMagicChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */; };
 		BBA81F3F251B178D0073C606 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA81F3E251B178D0073C606 /* ChatView.swift */; };
 		BBA81F41251B178E0073C606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA81F40251B178E0073C606 /* Assets.xcassets */; };
@@ -19,9 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB1F8D94254B841600FCD8D8 /* mockMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockMessages.swift; sourceTree = "<group>"; };
 		BB4E1530251B237400534C3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BB94BD01251B259500605A1C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		BB94BD04251B2F1700605A1C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BB94BD04251B2F1700605A1C /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 		BBA81F39251B178D0073C606 /* InstantMagicChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstantMagicChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantMagicChatApp.swift; sourceTree = "<group>"; };
 		BBA81F3E251B178D0073C606 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -49,7 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				BB4E1530251B237400534C3F /* Message.swift */,
-				BB94BD04251B2F1700605A1C /* Extensions.swift */,
+				BB1F8D94254B841600FCD8D8 /* mockMessages.swift */,
+				BB94BD04251B2F1700605A1C /* ModelExtensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,7 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB94BD05251B2F1700605A1C /* Extensions.swift in Sources */,
+				BB94BD05251B2F1700605A1C /* ModelExtensions.swift in Sources */,
+				BB1F8D95254B841600FCD8D8 /* mockMessages.swift in Sources */,
 				BB94BD02251B259500605A1C /* MessageView.swift in Sources */,
 				BB4E1531251B237400534C3F /* Message.swift in Sources */,
 				BBA81F3F251B178D0073C606 /* ChatView.swift in Sources */,
@@ -318,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"InstantMagicChat/Preview Content\"";
 				DEVELOPMENT_TEAM = JT55BTWL93;
@@ -330,6 +335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "les.inf.puc-rio.br.InstantMagicChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,6 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"InstantMagicChat/Preview Content\"";
 				DEVELOPMENT_TEAM = JT55BTWL93;
@@ -353,6 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "les.inf.puc-rio.br.InstantMagicChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

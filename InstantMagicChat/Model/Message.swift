@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import CloudKitMagicCRUD
 
-struct Message:CKMRecord {
-	var recordName: String?
+struct Message:Hashable{
+	var id:String { String(self.hashValue) }
+	var timestamp:Date  = Date()
 	var sender:String
 	var content:String
-	var timestamp:Date = Date()
-	var id:String {self.recordName ?? String(self.hashValue)}
+	
 }

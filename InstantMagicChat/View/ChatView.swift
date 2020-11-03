@@ -7,19 +7,26 @@
 
 import SwiftUI
 import UIKit
-import CloudKitMagicCRUD
+
 struct ChatView: View {
-	@State var myName:String = "Joey Tribbiani"
-	@State var messages:[Message]
+	
+	@State var messages:[Message] = []
 	@State var newMessageText:String = ""
+	
+	@State var myName:String = ["Phebe", "Monica", "Rachel", "Joey", "Ross", "Chandler"]
+								.randomElement()!  // Gets a random name for user
+	@State var statusText = "No new Messages"
 	
 	var body: some View {
 		VStack {
+			
+			// Header
 			HStack {
 				Button(action: { receiveMessages() },
 					   label: {
 						Image(systemName: "square.and.arrow.down.on.square.fill").font(.title)
 					   })
+				Text(statusText).font(.system(size: 10))
 				TextField("What's your name", text: $myName).multilineTextAlignment(.trailing)
 				ZStack {
 					Text("◉").font(.largeTitle).foregroundColor(.green)
@@ -27,13 +34,14 @@ struct ChatView: View {
 				}
 			}
 			
+			
 			// Message feed
 			ScrollViewReader { scrollView in
 				ScrollView {
 					ForEach(messages, id: \.self) { message in
-						MessageView(myName: $myName, message: message).id(message.id)					}.padding(0)
-				}.padding(0)
-				.animation(.default)
+						MessageView(myName: $myName, message: message)
+					}
+				}//.animation(.default)
 				.onChange(of: messages, perform: { _ in
 					withAnimation {
 						scrollView.scrollTo(messages.last?.id)
@@ -49,7 +57,6 @@ struct ChatView: View {
 				TextField("say something", text: $newMessageText)
 				Button(action: {
 					send(self.newMessageText)
-					self.newMessageText = ""
 				},
 				label: {
 					Image(systemName: "square.and.arrow.up.fill").font(.title)
@@ -58,60 +65,36 @@ struct ChatView: View {
 			
 			
 		}.padding(.horizontal)
-		.onAppear {receiveMessages()}
-		.animation(.default)
+		.onAppear { receiveMessages() }
 	}
 	
-	func send(_ message:String) {
-		let newMessage = Message(sender: myName, content: message)
-		print(newMessage)
-			newMessage.ckSave(then: { result in
-				switch result {
-					case .success(let savedMessage):
-						UIScreen.main.brightness = 0
-//						self.messages.append(savedMessage as! Message)
-						print(savedMessage as! Message)
-						receiveMessages()
-					case .failure(let error):
-						debugPrint("Cannot Save new message \(message)")
-						debugPrint(error)
-				}
-			})
+	func send(_ text:String) {
+		guard !text.isEmpty else {return}
 		
+		let newMessage = Message(sender: myName, content: text)
+		self.messages.append(newMessage)
+
 	}
-	
-	
 	
 	func receiveMessages() {
-		Message.ckLoadAll(then: { result in
-			switch result {
-				case .success(let loadedMessages):
-					print(loadedMessages)
-					self.messages = (loadedMessages as? [Message]) ?? self.messages
-					self.messages.sort {$0.timestamp < $1.timestamp}
-				case .failure(let error):
-					debugPrint("Cannot load new messages")
-					debugPrint(error)
-			}
-		})
 		
+		self.messages = mockMessages
 	}
+	
 }
 
+#if DEBUG
 struct ChatView_Previews: PreviewProvider {
 	static var previews: some View {
-		let messages:[Message] = [
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "1 How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Ricardo Venieris", content: "2 How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "3 How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Ricardo Venieris", content: "S 1234"),
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "4 How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "1 How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Ricardo Venieris", content: "2 How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "3 How YOU doin'? "),
-			Message(recordName:UUID().uuidString, sender: "Ricardo Venieris", content: "S 1234"),
-			Message(recordName:UUID().uuidString, sender: "Joey Tribbiani", content: "4 How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? 1How YOU doin'? "),
-		]
-		ChatView(messages: messages)
+		let devices = [ //"iPhone 8",
+					   "iPhone 12 Pro Max"]
+		Group {
+			ForEach(devices, id: \.self) { device in
+				ChatView()
+					.previewDevice(PreviewDevice(rawValue: device))
+					.previewDisplayName(device)
+			}
+		}
 	}
 }
+#endif

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CloudKitMagicCRUD
 
 @main
 struct InstantMagicChatApp: App {
@@ -23,7 +22,6 @@ struct InstantMagicChatApp: App {
 				case .inactive:
 					break
 				case .active:
-					CKMDefault.containerIdentifyer = "iCloud.PUC.CloudTest"
 					break
 				@unknown default:
 					break
