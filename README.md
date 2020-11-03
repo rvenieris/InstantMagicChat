@@ -1,0 +1,5 @@
+# InstantMagicChat
+
+In this first part the chat is complete for local UI tests
+
+![UI Example](https://uce802098454b50f63a05d0cad35.previews.dropboxusercontent.com/p/thumb/AA_oIn6z3L-z3XYFECJnAVVW6S6s8S--MT1r6xnTpr8MFQhDDe0_YWId-A3y6vviqdOFDk7gObgmXA-iKQ55YXc2LqzhJx3Xjp_ft7nc7xsmgI3Ukz3Hcw2dBeM09DoYmL4WpEHaMA5pDKOTKFCh3fqejZ43OErtkA8-UUbFwFxuqercduFDGvbRzcnIsoFVuqm-ux8h9HqeTm4Fv9fCuxtsmi9Phk-u2ebLW-rpbrgDMwRgeoJpL7RLOzwiYLBGqAoWYvdmu54-6QL884tCfMhYjUOF9b4pJ2rrctA5uqTJNjCDLp4Q0HSzia6aRIOYV9hc0Jxsp4ibTnvX9iqPapZg1bQfFmGYrG_JqR2WM-ajQdsU1sFiXEd4O-A0xulZbJc/p.png)
