@@ -11,6 +11,11 @@ import CloudKitMagicCRUD
 @main
 struct InstantMagicChatApp: App {
 	@Environment(\.scenePhase) private var scenePhase
+    init() {
+        CKMDefault.containerIdentifyer = "iCloud.ADALab_Device_Controller"
+            //"iCloud.PUC.CloudTest"
+    }
+    
     var body: some Scene {
         WindowGroup {
 			ChatView(messages: [])
@@ -23,7 +28,6 @@ struct InstantMagicChatApp: App {
 				case .inactive:
 					break
 				case .active:
-					CKMDefault.containerIdentifyer = "iCloud.PUC.CloudTest"
 					break
 				@unknown default:
 					break

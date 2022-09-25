@@ -12,7 +12,7 @@ struct ChatView: View {
 	@State var myName:String = "Joey Tribbiani"
 	@State var messages:[Message]
 	@State var newMessageText:String = ""
-	
+    
 	var body: some View {
 		VStack {
 			HStack {
@@ -58,20 +58,25 @@ struct ChatView: View {
 			
 			
 		}.padding(.horizontal)
-		.onAppear {receiveMessages()}
+		.onAppear {
+            receiveMessages()
+        }
 		.animation(.default)
 	}
 	
 	func send(_ message:String) {
-		let newMessage = Message(sender: myName, content: message)
-		print(newMessage)
+        let senders = ["Joey", "Rachel", "Ross", "Monica", "Chandler", "Phoebe", myName]
+        let ind = self.messages.count % senders.count
+        let sender = senders[ind]
+        let content = message.isEmpty ? "Hi! I'm \(sender)" : message
+		let newMessage = Message(sender: sender, content: content)
+//		print(newMessage)
 			newMessage.ckSave(then: { result in
 				switch result {
 					case .success(let savedMessage):
-						UIScreen.main.brightness = 0
-//						self.messages.append(savedMessage as! Message)
-						print(savedMessage as! Message)
-						receiveMessages()
+                        guard let savedMessage = savedMessage as? Message else {return}
+						self.messages.append(savedMessage)
+//                        print(self.messages.count, savedMessage.content)
 					case .failure(let error):
 						debugPrint("Cannot Save new message \(message)")
 						debugPrint(error)
