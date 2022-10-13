@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CEE5B5828F7E01600EB2A42 /* InstantMagicChatRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstantMagicChatRelease.entitlements; sourceTree = "<group>"; };
 		BB4E1530251B237400534C3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BB94BD01251B259500605A1C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BB94BD04251B2F1700605A1C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		BBA81F3B251B178D0073C606 /* InstantMagicChat */ = {
 			isa = PBXGroup;
 			children = (
+				8CEE5B5828F7E01600EB2A42 /* InstantMagicChatRelease.entitlements */,
 				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
 				BB51352F251B22B800D099A2 /* Model */,
 				BB513530251B22C100D099A2 /* View */,
@@ -342,7 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChat.entitlements;
+				CODE_SIGN_ENTITLEMENTS = InstantMagicChat/InstantMagicChatRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"InstantMagicChat/Preview Content\"";
 				DEVELOPMENT_TEAM = 67AYPRFZH8;
