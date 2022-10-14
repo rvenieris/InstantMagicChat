@@ -14,10 +14,13 @@ struct MessageDetails: View {
         VStack{
             List{
                 Section(header: Text("Data de Criação")){
-                    Text(message.timestamp.day)
+                    Text(message.timestamp, style: .date)
                 }
                 Section(header: Text("Hora de Criação")){
-                    Text(message.timestamp.time)
+                    Text(message.timestamp, style: .time)
+                }
+                Section(header: Text("Id da Mensagem")){
+                    Text(message.id)
                 }
                 Section(header: Text("Remetente")){
                     Text(message.sender)

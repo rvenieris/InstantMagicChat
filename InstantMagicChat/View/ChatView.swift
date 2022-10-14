@@ -30,25 +30,30 @@ struct ChatView: View {
                 }
                 
                 // Message feed
-                ScrollViewReader { scrollView in
-                    ScrollView {
-                        ForEach(messages, id: \.self) { message in
+                ScrollView{
+                    ScrollViewReader{ scrollView in
+                        ForEach(messages) { message in
                             NavigationLink(destination: MessageDetails(message: message), label: {
                                 MessageView(myName: $myName,message: message)
                                     .id(message.id)
                             })
-                        }.padding(0)
-                    }.padding(0)
-                        .animation(.default)
-                        .onChange(of: messages, perform: { _ in
-                            withAnimation {
-                                guard let id = messages.last?.id else{return}
-                                scrollView.scrollTo(id)
+                            
+                        }
+                        
+                        .onAppear(perform: {
+                            receiveMessages()
+                        })
+                        .onChange(of: messages, perform: { newMessages in
+                            
+                            withAnimation{
+                                guard messages.count>0 else{return}
+                                let id = newMessages[newMessages.count-1].id
+                                scrollView.scrollTo(id, anchor: .bottom)
                             }
                         })
-                        .onAppear {
-                            receiveMessages()
-                        }
+                    }
+                    
+                    
                 }
                 
                 // Botton message sender
@@ -65,9 +70,7 @@ struct ChatView: View {
                 
                 
             }.padding(.horizontal)
-                .onAppear {
-                    receiveMessages()
-                }
+                
                 .animation(.default)
         }.buttonStyle(.plain)
     }
