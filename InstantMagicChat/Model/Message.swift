@@ -8,7 +8,7 @@
 import Foundation
 import CloudKitMagicCRUD
 
-struct Message:CKMRecord {
+struct Message:CKMRecord, Identifiable {
 	var recordName: String?
 	var sender:String
 	var content:String
