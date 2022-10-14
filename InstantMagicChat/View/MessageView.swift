@@ -65,10 +65,10 @@ struct MessageView: View {
         return Color(NamedColor.color(for: name, itsMe: self.itsMe))
     }
 }
-
-struct MessageView_Previews: PreviewProvider {
-	@State static var myName:String = "Joey Tribbiani"
-    static var previews: some View {
-		MessageView(myName: $myName, message:Message(sender: "Joey Tribbiani", content: "How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? "))
-    }
-}
+//
+//struct MessageView_Previews: PreviewProvider {
+//	@State static var myName:String = "Joey Tribbiani"
+//    static var previews: some View {
+//		MessageView(myName: $myName, message:Message(sender: "Joey Tribbiani", content: "How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? How YOU doin'? "))
+//    }
+//}

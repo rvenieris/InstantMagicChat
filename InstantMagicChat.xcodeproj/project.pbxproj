@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0647E49628F91815007EF78C /* MessageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0647E49528F91815007EF78C /* MessageDetails.swift */; };
 		BB4E1531251B237400534C3F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E1530251B237400534C3F /* Message.swift */; };
 		BB51352D251B227F00D099A2 /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = BB51352C251B227F00D099A2 /* CloudKitMagicCRUD */; };
 		BB94BD02251B259500605A1C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94BD01251B259500605A1C /* MessageView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0647E49528F91815007EF78C /* MessageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetails.swift; sourceTree = "<group>"; };
 		8CEE5B5828F7E01600EB2A42 /* InstantMagicChatRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstantMagicChatRelease.entitlements; sourceTree = "<group>"; };
 		BB4E1530251B237400534C3F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BB94BD01251B259500605A1C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				BBA81F3E251B178D0073C606 /* ChatView.swift */,
 				BB94BD01251B259500605A1C /* MessageView.swift */,
+				0647E49528F91815007EF78C /* MessageDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0647E49628F91815007EF78C /* MessageDetails.swift in Sources */,
 				BB94BD05251B2F1700605A1C /* Extensions.swift in Sources */,
 				BB94BD02251B259500605A1C /* MessageView.swift in Sources */,
 				BB4E1531251B237400534C3F /* Message.swift in Sources */,
