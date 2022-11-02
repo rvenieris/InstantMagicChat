@@ -8,7 +8,8 @@
 import SwiftUI
 import UIKit
 import CloudKitMagicCRUD
-struct ChatView: View {
+
+struct ChatView: View, CKMRecordObserver {
 	@State var myName:String = "Joey Tribbiani"
 	@State var messages:[Message]
 	@State var newMessageText:String = ""
@@ -41,6 +42,7 @@ struct ChatView: View {
 				})
 				.onAppear {
 					scrollView.scrollTo(messages.last?.id)
+                    Message.register(observer: self)
 				}
 			}
 			
@@ -60,14 +62,13 @@ struct ChatView: View {
 		}.padding(.horizontal)
 		.onAppear {
             receiveMessages()
+            createNotification()
         }
 		.animation(.default)
 	}
 	
 	func send(_ message:String) {
-        let senders = ["Joey", "Rachel", "Ross", "Monica", "Chandler", "Phoebe", myName]
-        let ind = self.messages.count % senders.count
-        let sender = senders[ind]
+        let sender = myName
         let content = message.isEmpty ? "Hi! I'm \(sender)" : message
 		let newMessage = Message(sender: sender, content: content)
 //		print(newMessage)
@@ -85,7 +86,18 @@ struct ChatView: View {
 		
 	}
 	
-	
+    func createNotification() {
+        CKMDefault.notificationManager.createNotification(to:self, for: Message.self) {
+            result in
+            switch result {
+                case .success( _):
+//                    debugPrint(subscription)
+                    break
+                case .failure(let error):
+                    debugPrint(error)
+            }
+        }
+    }
 	
 	func receiveMessages() {
 		Message.ckLoadAll(then: { result in
@@ -93,7 +105,7 @@ struct ChatView: View {
 				case .success(let loadedMessages):
 					print(loadedMessages)
 					self.messages = (loadedMessages as? [Message]) ?? self.messages
-					self.messages.sort {$0.timestamp < $1.timestamp}
+					self.messages.sort {$0.createdAt < $1.createdAt}
 				case .failure(let error):
 					debugPrint("Cannot load new messages")
 					debugPrint(error)
@@ -101,6 +113,18 @@ struct ChatView: View {
 		})
 		
 	}
+    
+    func onReceive(notification: CloudKitMagicCRUD.CKMNotification) {
+        if #available(iOS 15.0, *) {
+            print("New Message at \(notification.date.formatted(date: .omitted, time: .complete))")
+            print(notification.body, notification.title, notification.userID ?? "")
+        } else {
+            print("New Message at \(notification.date)")
+        }
+        
+        receiveMessages()
+    }
+
 }
 
 struct ChatView_Previews: PreviewProvider {

@@ -1,16 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "CloudKitMagicCRUD",
-        "repositoryURL": "https://github.com/rvenieris/CloudKitMagicCRUD.git",
-        "state": {
-          "branch": "master",
-          "revision": "8de3e481bcb73267cff0ab41c5834bbdff7638ec",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "cloudkitmagiccrud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rvenieris/CloudKitMagicCRUD.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3eb7c7585088e6b800656560566809d0e918268d"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "codableextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rvenieris/CodableExtensions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5698b8fde715219b33042efd898d65a9a48dd73f"
+      }
+    }
+  ],
+  "version" : 2
 }

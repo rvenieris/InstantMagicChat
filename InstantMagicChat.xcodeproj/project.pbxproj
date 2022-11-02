@@ -50,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				BB4E1530251B237400534C3F /* Message.swift */,
-				BB94BD04251B2F1700605A1C /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,11 +83,12 @@
 		BBA81F3B251B178D0073C606 /* InstantMagicChat */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE5B5828F7E01600EB2A42 /* InstantMagicChatRelease.entitlements */,
-				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
 				BB51352F251B22B800D099A2 /* Model */,
 				BB513530251B22C100D099A2 /* View */,
+				BBA81F3C251B178D0073C606 /* InstantMagicChatApp.swift */,
+				BB94BD04251B2F1700605A1C /* Extensions.swift */,
 				BBA81F4C251B186E0073C606 /* InstantMagicChat.entitlements */,
+				8CEE5B5828F7E01600EB2A42 /* InstantMagicChatRelease.entitlements */,
 				BBA81F40251B178E0073C606 /* Assets.xcassets */,
 				BBA81F45251B178E0073C606 /* Info.plist */,
 				BBA81F42251B178E0073C606 /* Preview Content */,

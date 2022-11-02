@@ -27,7 +27,6 @@ class NamedColor:UIColor {
 }
 
 struct MessageView: View {
-	
 	@Binding var myName:String
 	var message:Message
 	var itsMe:Bool { return message.sender == myName }
@@ -46,10 +45,10 @@ struct MessageView: View {
 					.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
 					.fixedSize(horizontal: false, vertical: true)
 				HStack {
-					Text(message.timestamp.day)
+					Text(message.createdAt.day)
 						.font(.system(size: 12))
 					Spacer()
-					Text(message.timestamp.time)
+					Text(message.createdAt.time)
 						.font(.system(size: 12))
 				}
 				.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
@@ -64,6 +63,7 @@ struct MessageView: View {
     func color(for name:String)->Color {
         return Color(NamedColor.color(for: name, itsMe: self.itsMe))
     }
+    
 }
 
 struct MessageView_Previews: PreviewProvider {

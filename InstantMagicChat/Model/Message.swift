@@ -12,6 +12,6 @@ struct Message:CKMRecord {
 	var recordName: String?
 	var sender:String
 	var content:String
-	var timestamp:Date = Date()
+	var createdAt:Date = Date()
 	var id:String {self.recordName ?? String(self.hashValue)}
 }

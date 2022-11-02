@@ -12,8 +12,10 @@ import CloudKitMagicCRUD
 struct InstantMagicChatApp: App {
 	@Environment(\.scenePhase) private var scenePhase
     init() {
-        CKMDefault.containerIdentifyer = "iCloud.ADALab_Device_Controller"
+        CKMDefault.containerIdentifier = "iCloud.ADA_Test_Projects"
+//        CKMDefault.containerIdentifier = "iCloud.ADALab_Device_Controller"
             //"iCloud.PUC.CloudTest"
+        
     }
     
     var body: some Scene {
